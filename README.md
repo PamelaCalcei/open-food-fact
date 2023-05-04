@@ -1,5 +1,5 @@
 # Projet Open Food Facts
-Description:
+# Description:
 
 Vous connaissez peut-être l’application Yuka, disponible sur smartphone. Yuka fournit des informations nutritionnelles sur pratiquement tous les produits alimentaires commercialisés en France. En plus d’informations, elle fournit également un score nutritionnel, de A (excellent) à F (mauvais).
 Cette application à succès s’est construite sur une base de données open source appelée Open Food Facts. 
@@ -20,7 +20,7 @@ Index 28 : liste des allergènes séparés la plupart du temps par des virgules
 Index 29 : liste des additifs séparés la plupart du temps par des virgules
 
 
-Objectifs
+# Objectifs
 
 Le but est de concevoir et développer une application basée sur l’API JPA pour mettre en base toutes ces données.
 
