@@ -1,4 +1,4 @@
-Projet Open Food Facts
+# Projet Open Food Facts
 Description:
 
 Vous connaissez peut-être l’application Yuka, disponible sur smartphone. Yuka fournit des informations nutritionnelles sur pratiquement tous les produits alimentaires commercialisés en France. En plus d’informations, elle fournit également un score nutritionnel, de A (excellent) à F (mauvais).
@@ -72,13 +72,3 @@ de rechercher les N meilleurs produits par Marque et par Catégorie. La marque, 
 d’afficher les N ingrédients les plus courants avec le nb de produits dans lesquels ils apparaissent. La valeur de N est demandée à l’utilisateur.
 d’afficher les N allergènes les plus courants avec le nb de produits dans lesquels ils apparaissent. La valeur de N est demandée à l’utilisateur.
 d’afficher les N additifs les plus courants avec le nb de produits dans lesquels ils apparaissent. La valeur de N est demandée à l’utilisateur.
-Instructions techniques complémentaires
-
-Créez un nouveau projet STS/GitHub/Maven nommé traitement-fichier
-Créez un répertoire conception à la racine de votre projet
-Placez-y le dossier de conception.
-Réalisez les développements.
-Mettez en place les optimisations afin de battre le record !
-Développez l’application de restitution des informations.
-Bon courage !
-COMMITEZ !!
