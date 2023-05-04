@@ -153,7 +153,7 @@
 											"top": 398,
 											"width": 191,
 											"height": 13,
-											"text": "-idProduit",
+											"text": "-idProduit: int",
 											"horizontalAlignment": 0
 										},
 										{
@@ -170,7 +170,7 @@
 											"top": 413,
 											"width": 191,
 											"height": 13,
-											"text": "-marque",
+											"text": "-marque: Marque",
 											"horizontalAlignment": 0
 										},
 										{
@@ -187,7 +187,7 @@
 											"top": 428,
 											"width": 191,
 											"height": 13,
-											"text": "-nom",
+											"text": "-nom: String",
 											"horizontalAlignment": 0
 										},
 										{
@@ -240,7 +240,7 @@
 											"top": 443,
 											"width": 191,
 											"height": 13,
-											"text": "-energie",
+											"text": "-energie: int",
 											"horizontalAlignment": 0
 										},
 										{
@@ -257,7 +257,7 @@
 											"top": 458,
 											"width": 191,
 											"height": 13,
-											"text": "-quantiteGraisse",
+											"text": "-quantiteGraisse: float",
 											"horizontalAlignment": 0
 										},
 										{
@@ -274,7 +274,7 @@
 											"top": 473,
 											"width": 191,
 											"height": 13,
-											"text": "-ingredient []",
+											"text": "-ingredient: Ingredient",
 											"horizontalAlignment": 0
 										},
 										{
@@ -291,7 +291,7 @@
 											"top": 488,
 											"width": 191,
 											"height": 13,
-											"text": "-additif []",
+											"text": "-additif: Additif",
 											"horizontalAlignment": 0
 										},
 										{
@@ -308,7 +308,7 @@
 											"top": 503,
 											"width": 191,
 											"height": 13,
-											"text": "-categorie []",
+											"text": "-categorie: Categorie",
 											"horizontalAlignment": 0
 										},
 										{
@@ -325,7 +325,7 @@
 											"top": 518,
 											"width": 191,
 											"height": 13,
-											"text": "-allergene []",
+											"text": "-allergene: Allergene",
 											"horizontalAlignment": 0
 										},
 										{
@@ -342,7 +342,7 @@
 											"top": 533,
 											"width": 191,
 											"height": 13,
-											"text": "-marque[]",
+											"text": "-marque: Marque",
 											"horizontalAlignment": 0
 										},
 										{
@@ -359,7 +359,7 @@
 											"top": 548,
 											"width": 191,
 											"height": 13,
-											"text": "-sucre",
+											"text": "-sucre: float",
 											"horizontalAlignment": 0
 										},
 										{
@@ -376,7 +376,7 @@
 											"top": 563,
 											"width": 191,
 											"height": 13,
-											"text": "-fibres",
+											"text": "-fibres: float",
 											"horizontalAlignment": 0
 										},
 										{
@@ -393,7 +393,7 @@
 											"top": 578,
 											"width": 191,
 											"height": 13,
-											"text": "-proteines",
+											"text": "-proteines: float",
 											"horizontalAlignment": 0
 										},
 										{
@@ -410,7 +410,7 @@
 											"top": 593,
 											"width": 191,
 											"height": 13,
-											"text": "-vitA",
+											"text": "-vitA: double",
 											"horizontalAlignment": 0
 										},
 										{
@@ -427,7 +427,7 @@
 											"top": 608,
 											"width": 191,
 											"height": 13,
-											"text": "-vitB2",
+											"text": "-vitD: double",
 											"horizontalAlignment": 0
 										},
 										{
@@ -444,7 +444,7 @@
 											"top": 623,
 											"width": 191,
 											"height": 13,
-											"text": "-vitPP",
+											"text": "-vitE: double",
 											"horizontalAlignment": 0
 										},
 										{
@@ -461,7 +461,7 @@
 											"top": 638,
 											"width": 191,
 											"height": 13,
-											"text": "-vitB6",
+											"text": "-vitK: double",
 											"horizontalAlignment": 0
 										},
 										{
@@ -478,7 +478,7 @@
 											"top": 653,
 											"width": 191,
 											"height": 13,
-											"text": "-vitB9",
+											"text": "-vitC: double",
 											"horizontalAlignment": 0
 										},
 										{
@@ -495,7 +495,7 @@
 											"top": 668,
 											"width": 191,
 											"height": 13,
-											"text": "-vitB12",
+											"text": "-vitB1: double",
 											"horizontalAlignment": 0
 										},
 										{
@@ -512,7 +512,7 @@
 											"top": 683,
 											"width": 191,
 											"height": 13,
-											"text": "-calcium",
+											"text": "-vitB2: double",
 											"horizontalAlignment": 0
 										},
 										{
@@ -529,7 +529,7 @@
 											"top": 698,
 											"width": 191,
 											"height": 13,
-											"text": "-magnesium",
+											"text": "-vitPP: double",
 											"horizontalAlignment": 0
 										},
 										{
@@ -546,7 +546,7 @@
 											"top": 713,
 											"width": 191,
 											"height": 13,
-											"text": "-iron",
+											"text": "-vitB6: double",
 											"horizontalAlignment": 0
 										},
 										{
@@ -563,7 +563,7 @@
 											"top": 728,
 											"width": 191,
 											"height": 13,
-											"text": "-fer",
+											"text": "-vitB9: double",
 											"horizontalAlignment": 0
 										},
 										{
@@ -580,7 +580,7 @@
 											"top": 743,
 											"width": 191,
 											"height": 13,
-											"text": "-betaCarotene",
+											"text": "-vitB12: double",
 											"horizontalAlignment": 0
 										},
 										{
@@ -597,7 +597,7 @@
 											"top": 758,
 											"width": 191,
 											"height": 13,
-											"text": "-huilePalme",
+											"text": "-calcium: double",
 											"horizontalAlignment": 0
 										},
 										{
@@ -617,13 +617,98 @@
 											"height": 13,
 											"text": "+Attribute2",
 											"horizontalAlignment": 0
+										},
+										{
+											"_type": "UMLAttributeView",
+											"_id": "AAAAAAGH5ytF2whL3is=",
+											"_parent": {
+												"$ref": "AAAAAAGH5a1IFqgXw3I="
+											},
+											"model": {
+												"$ref": "AAAAAAGH5ytF0whI7y8="
+											},
+											"font": "Arial;13;0",
+											"left": 629,
+											"top": 773,
+											"width": 191,
+											"height": 13,
+											"text": "-magnesium: double",
+											"horizontalAlignment": 0
+										},
+										{
+											"_type": "UMLAttributeView",
+											"_id": "AAAAAAGH5ytT2AkFO1k=",
+											"_parent": {
+												"$ref": "AAAAAAGH5a1IFqgXw3I="
+											},
+											"model": {
+												"$ref": "AAAAAAGH5ytT0wkClDc="
+											},
+											"font": "Arial;13;0",
+											"left": 629,
+											"top": 788,
+											"width": 191,
+											"height": 13,
+											"text": "-iron: double",
+											"horizontalAlignment": 0
+										},
+										{
+											"_type": "UMLAttributeView",
+											"_id": "AAAAAAGH5ytgyAoZMPI=",
+											"_parent": {
+												"$ref": "AAAAAAGH5a1IFqgXw3I="
+											},
+											"model": {
+												"$ref": "AAAAAAGH5ytgxAoW+wY="
+											},
+											"font": "Arial;13;0",
+											"left": 629,
+											"top": 803,
+											"width": 191,
+											"height": 13,
+											"text": "-fer: double",
+											"horizontalAlignment": 0
+										},
+										{
+											"_type": "UMLAttributeView",
+											"_id": "AAAAAAGH5ywfABT6010=",
+											"_parent": {
+												"$ref": "AAAAAAGH5a1IFqgXw3I="
+											},
+											"model": {
+												"$ref": "AAAAAAGH5ywe+BT3y5k="
+											},
+											"font": "Arial;13;0",
+											"left": 629,
+											"top": 818,
+											"width": 191,
+											"height": 13,
+											"text": "-betaCarotene: double",
+											"horizontalAlignment": 0
+										},
+										{
+											"_type": "UMLAttributeView",
+											"_id": "AAAAAAGH5yxC1RiXZQ0=",
+											"_parent": {
+												"$ref": "AAAAAAGH5a1IFqgXw3I="
+											},
+											"model": {
+												"$ref": "AAAAAAGH5yxC0BiUZp0="
+											},
+											"font": "Arial;13;0",
+											"left": 629,
+											"top": 833,
+											"width": 191,
+											"height": 13,
+											"text": "-huilePalme: bool",
+											"horizontalAlignment": 0
 										}
 									],
 									"font": "Arial;13;0",
 									"left": 624,
 									"top": 393,
 									"width": 201,
-									"height": 383
+									"height": 458
 								},
 								{
 									"_type": "UMLOperationCompartmentView",
@@ -636,7 +721,7 @@
 									},
 									"font": "Arial;13;0",
 									"left": 624,
-									"top": 776,
+									"top": 851,
 									"width": 201,
 									"height": 10
 								},
@@ -678,7 +763,7 @@
 							"left": 624,
 							"top": 368,
 							"width": 201,
-							"height": 433,
+							"height": 493,
 							"nameCompartment": {
 								"$ref": "AAAAAAGH5a1IFagS504="
 							},
@@ -810,7 +895,7 @@
 											"top": 390,
 											"width": 214,
 											"height": 13,
-											"text": "-idCategorie",
+											"text": "-id: int",
 											"horizontalAlignment": 0
 										},
 										{
@@ -827,7 +912,7 @@
 											"top": 405,
 											"width": 214,
 											"height": 13,
-											"text": "-nom",
+											"text": "-nom String",
 											"horizontalAlignment": 0
 										}
 									],
@@ -1022,7 +1107,7 @@
 											"top": 94,
 											"width": 286,
 											"height": 13,
-											"text": "-id",
+											"text": "-id: int",
 											"horizontalAlignment": 0
 										},
 										{
@@ -1039,7 +1124,7 @@
 											"top": 109,
 											"width": 286,
 											"height": 13,
-											"text": "-nom",
+											"text": "-nom: String",
 											"horizontalAlignment": 0
 										}
 									],
@@ -1147,8 +1232,8 @@
 											},
 											"visible": false,
 											"font": "Arial;13;0",
-											"left": 400,
-											"top": 656,
+											"left": 384,
+											"top": 720,
 											"height": 13
 										},
 										{
@@ -1158,8 +1243,8 @@
 												"$ref": "AAAAAAGH5jFCO7UKIH0="
 											},
 											"font": "Arial;13;1",
-											"left": 653,
-											"top": 919,
+											"left": 645,
+											"top": 951,
 											"width": 111,
 											"height": 13,
 											"text": "Additif"
@@ -1172,8 +1257,8 @@
 											},
 											"visible": false,
 											"font": "Arial;13;0",
-											"left": 400,
-											"top": 656,
+											"left": 384,
+											"top": 720,
 											"width": 80.9072265625,
 											"height": 13,
 											"text": "(from Model1)"
@@ -1186,15 +1271,15 @@
 											},
 											"visible": false,
 											"font": "Arial;13;0",
-											"left": 400,
-											"top": 656,
+											"left": 384,
+											"top": 720,
 											"height": 13,
 											"horizontalAlignment": 1
 										}
 									],
 									"font": "Arial;13;0",
-									"left": 648,
-									"top": 912,
+									"left": 640,
+									"top": 944,
 									"width": 121,
 									"height": 25,
 									"stereotypeLabel": {
@@ -1230,11 +1315,11 @@
 												"$ref": "AAAAAAGH5jFs8rVtHc0="
 											},
 											"font": "Arial;13;0",
-											"left": 653,
-											"top": 942,
+											"left": 645,
+											"top": 974,
 											"width": 111,
 											"height": 13,
-											"text": "-id",
+											"text": "-id: int",
 											"horizontalAlignment": 0
 										},
 										{
@@ -1247,19 +1332,36 @@
 												"$ref": "AAAAAAGH5jF+xLW/Hkk="
 											},
 											"font": "Arial;13;0",
-											"left": 653,
-											"top": 957,
+											"left": 645,
+											"top": 989,
 											"width": 111,
 											"height": 13,
-											"text": "-nom",
+											"text": "-code: String",
+											"horizontalAlignment": 0
+										},
+										{
+											"_type": "UMLAttributeView",
+											"_id": "AAAAAAGH5ydRAOiFCB4=",
+											"_parent": {
+												"$ref": "AAAAAAGH5jFCO7UP26k="
+											},
+											"model": {
+												"$ref": "AAAAAAGH5ydQ9+iCAr4="
+											},
+											"font": "Arial;13;0",
+											"left": 645,
+											"top": 1004,
+											"width": 111,
+											"height": 13,
+											"text": "-nom: String",
 											"horizontalAlignment": 0
 										}
 									],
 									"font": "Arial;13;0",
-									"left": 648,
-									"top": 937,
+									"left": 640,
+									"top": 969,
 									"width": 121,
-									"height": 38
+									"height": 53
 								},
 								{
 									"_type": "UMLOperationCompartmentView",
@@ -1271,8 +1373,8 @@
 										"$ref": "AAAAAAGH5jFCOrUHhnw="
 									},
 									"font": "Arial;13;0",
-									"left": 648,
-									"top": 975,
+									"left": 640,
+									"top": 1022,
 									"width": 121,
 									"height": 10
 								},
@@ -1287,8 +1389,8 @@
 									},
 									"visible": false,
 									"font": "Arial;13;0",
-									"left": 200,
-									"top": 328,
+									"left": 192,
+									"top": 360,
 									"width": 10,
 									"height": 10
 								},
@@ -1303,16 +1405,16 @@
 									},
 									"visible": false,
 									"font": "Arial;13;0",
-									"left": 200,
-									"top": 328,
+									"left": 192,
+									"top": 360,
 									"width": 10,
 									"height": 10
 								}
 							],
 							"font": "Arial;13;0",
 							"containerChangeable": true,
-							"left": 648,
-							"top": 912,
+							"left": 640,
+							"top": 944,
 							"width": 121,
 							"height": 161,
 							"nameCompartment": {
@@ -1446,7 +1548,7 @@
 											"top": 390,
 											"width": 134,
 											"height": 13,
-											"text": "-nom",
+											"text": "+nom: String",
 											"horizontalAlignment": 0
 										}
 									],
@@ -1568,7 +1670,7 @@
 									"visible": false,
 									"font": "Arial;13;0",
 									"left": 738,
-									"top": 849,
+									"top": 895,
 									"height": 13,
 									"alpha": 1.5707963267948966,
 									"distance": 15,
@@ -1589,7 +1691,7 @@
 									"visible": null,
 									"font": "Arial;13;0",
 									"left": 753,
-									"top": 849,
+									"top": 895,
 									"height": 13,
 									"alpha": 1.5707963267948966,
 									"distance": 30,
@@ -1610,7 +1712,7 @@
 									"visible": false,
 									"font": "Arial;13;0",
 									"left": 709,
-									"top": 850,
+									"top": 896,
 									"height": 13,
 									"alpha": -1.5707963267948966,
 									"distance": 15,
@@ -1631,7 +1733,7 @@
 									"visible": false,
 									"font": "Arial;13;0",
 									"left": 739,
-									"top": 819,
+									"top": 879,
 									"height": 13,
 									"alpha": 0.5235987755982988,
 									"distance": 30,
@@ -1652,7 +1754,7 @@
 									"visible": false,
 									"font": "Arial;13;0",
 									"left": 752,
-									"top": 822,
+									"top": 882,
 									"height": 13,
 									"alpha": 0.7853981633974483,
 									"distance": 40,
@@ -1672,7 +1774,7 @@
 									},
 									"font": "Arial;13;0",
 									"left": 701,
-									"top": 815,
+									"top": 875,
 									"width": 21.68359375,
 									"height": 13,
 									"alpha": -0.5235987755982988,
@@ -1695,7 +1797,7 @@
 									"visible": false,
 									"font": "Arial;13;0",
 									"left": 739,
-									"top": 880,
+									"top": 912,
 									"height": 13,
 									"alpha": -0.5235987755982988,
 									"distance": 30,
@@ -1715,7 +1817,7 @@
 									"visible": false,
 									"font": "Arial;13;0",
 									"left": 752,
-									"top": 877,
+									"top": 909,
 									"height": 13,
 									"alpha": -0.7853981633974483,
 									"distance": 40,
@@ -1734,7 +1836,7 @@
 									},
 									"font": "Arial;13;0",
 									"left": 702,
-									"top": 884,
+									"top": 916,
 									"width": 19.5126953125,
 									"height": 13,
 									"alpha": 0.5235987755982988,
@@ -1780,7 +1882,7 @@
 							"tail": {
 								"$ref": "AAAAAAGH5a1IFagRM1k="
 							},
-							"points": "724:800;724:912",
+							"points": "724:860;724:944",
 							"showVisibility": true,
 							"nameLabel": {
 								"$ref": "AAAAAAGH5wDESCurZc4="
@@ -2546,9 +2648,9 @@
 										"$ref": "AAAAAAGH5wDY9C+8mOk="
 									},
 									"font": "Arial;13;0",
-									"left": 1151,
+									"left": 1145,
 									"top": 478,
-									"width": 7.22998046875,
+									"width": 19.5126953125,
 									"height": 13,
 									"alpha": 0.5235987755982988,
 									"distance": 25,
@@ -2739,7 +2841,7 @@
 											"top": 662,
 											"width": 150,
 											"height": 13,
-											"text": "-id",
+											"text": "-id: int",
 											"horizontalAlignment": 0
 										},
 										{
@@ -2756,7 +2858,7 @@
 											"top": 677,
 											"width": 150,
 											"height": 13,
-											"text": "-nom",
+											"text": "-nom: String",
 											"horizontalAlignment": 0
 										}
 									],
@@ -3218,7 +3320,7 @@
 											"top": 670,
 											"width": 198,
 											"height": 13,
-											"text": "-id",
+											"text": "-id: int",
 											"horizontalAlignment": 0
 										},
 										{
@@ -3235,7 +3337,7 @@
 											"top": 685,
 											"width": 198,
 											"height": 13,
-											"text": "-nom",
+											"text": "-nom: String",
 											"horizontalAlignment": 0
 										}
 									],
@@ -3440,9 +3542,9 @@
 										"$ref": "AAAAAAGH5wI/mk1nCNs="
 									},
 									"font": "Arial;13;0",
-									"left": 1039,
+									"left": 1033,
 									"top": 640,
-									"width": 7.22998046875,
+									"width": 19.5126953125,
 									"height": 13,
 									"alpha": -0.5235987755982988,
 									"distance": 25,
@@ -3450,7 +3552,7 @@
 										"$ref": "AAAAAAGH5wI/mk1qIDc="
 									},
 									"edgePosition": 2,
-									"text": "1"
+									"text": "1..*"
 								},
 								{
 									"_type": "EdgeLabelView",
@@ -3996,7 +4098,8 @@
 								"$ref": "AAAAAAGH5a1IFagPVk0="
 							},
 							"name": "idProduit",
-							"visibility": "private"
+							"visibility": "private",
+							"type": "int"
 						},
 						{
 							"_type": "UMLAttribute",
@@ -4005,7 +4108,10 @@
 								"$ref": "AAAAAAGH5a1IFagPVk0="
 							},
 							"name": "marque",
-							"visibility": "private"
+							"visibility": "private",
+							"type": {
+								"$ref": "AAAAAAGH5wIVykgbhHA="
+							}
 						},
 						{
 							"_type": "UMLAttribute",
@@ -4014,7 +4120,8 @@
 								"$ref": "AAAAAAGH5a1IFagPVk0="
 							},
 							"name": "nom",
-							"visibility": "private"
+							"visibility": "private",
+							"type": "String"
 						},
 						{
 							"_type": "UMLAttribute",
@@ -4041,7 +4148,8 @@
 								"$ref": "AAAAAAGH5a1IFagPVk0="
 							},
 							"name": "energie",
-							"visibility": "private"
+							"visibility": "private",
+							"type": "int"
 						},
 						{
 							"_type": "UMLAttribute",
@@ -4050,7 +4158,8 @@
 								"$ref": "AAAAAAGH5a1IFagPVk0="
 							},
 							"name": "quantiteGraisse",
-							"visibility": "private"
+							"visibility": "private",
+							"type": "float"
 						},
 						{
 							"_type": "UMLAttribute",
@@ -4058,8 +4167,11 @@
 							"_parent": {
 								"$ref": "AAAAAAGH5a1IFagPVk0="
 							},
-							"name": "ingredient []",
-							"visibility": "private"
+							"name": "ingredient",
+							"visibility": "private",
+							"type": {
+								"$ref": "AAAAAAGH5wEnlTdBmRA="
+							}
 						},
 						{
 							"_type": "UMLAttribute",
@@ -4067,8 +4179,9 @@
 							"_parent": {
 								"$ref": "AAAAAAGH5a1IFagPVk0="
 							},
-							"name": "additif []",
-							"visibility": "private"
+							"name": "additif",
+							"visibility": "private",
+							"type": "Additif"
 						},
 						{
 							"_type": "UMLAttribute",
@@ -4076,8 +4189,9 @@
 							"_parent": {
 								"$ref": "AAAAAAGH5a1IFagPVk0="
 							},
-							"name": "categorie []",
-							"visibility": "private"
+							"name": "categorie",
+							"visibility": "private",
+							"type": "Categorie"
 						},
 						{
 							"_type": "UMLAttribute",
@@ -4085,8 +4199,11 @@
 							"_parent": {
 								"$ref": "AAAAAAGH5a1IFagPVk0="
 							},
-							"name": "allergene []",
-							"visibility": "private"
+							"name": "allergene",
+							"visibility": "private",
+							"type": {
+								"$ref": "AAAAAAGH5jCgfrNBpOw="
+							}
 						},
 						{
 							"_type": "UMLAttribute",
@@ -4094,8 +4211,11 @@
 							"_parent": {
 								"$ref": "AAAAAAGH5a1IFagPVk0="
 							},
-							"name": "marque[]",
-							"visibility": "private"
+							"name": "marque",
+							"visibility": "private",
+							"type": {
+								"$ref": "AAAAAAGH5wIVykgbhHA="
+							}
 						},
 						{
 							"_type": "UMLAttribute",
@@ -4104,7 +4224,8 @@
 								"$ref": "AAAAAAGH5a1IFagPVk0="
 							},
 							"name": "sucre",
-							"visibility": "private"
+							"visibility": "private",
+							"type": "float"
 						},
 						{
 							"_type": "UMLAttribute",
@@ -4113,7 +4234,8 @@
 								"$ref": "AAAAAAGH5a1IFagPVk0="
 							},
 							"name": "fibres",
-							"visibility": "private"
+							"visibility": "private",
+							"type": "float"
 						},
 						{
 							"_type": "UMLAttribute",
@@ -4122,7 +4244,8 @@
 								"$ref": "AAAAAAGH5a1IFagPVk0="
 							},
 							"name": "proteines",
-							"visibility": "private"
+							"visibility": "private",
+							"type": "float"
 						},
 						{
 							"_type": "UMLAttribute",
@@ -4131,7 +4254,8 @@
 								"$ref": "AAAAAAGH5a1IFagPVk0="
 							},
 							"name": "vitA",
-							"visibility": "private"
+							"visibility": "private",
+							"type": "double"
 						},
 						{
 							"_type": "UMLAttribute",
@@ -4139,8 +4263,9 @@
 							"_parent": {
 								"$ref": "AAAAAAGH5a1IFagPVk0="
 							},
-							"name": "vitB2",
-							"visibility": "private"
+							"name": "vitD",
+							"visibility": "private",
+							"type": "double"
 						},
 						{
 							"_type": "UMLAttribute",
@@ -4148,8 +4273,9 @@
 							"_parent": {
 								"$ref": "AAAAAAGH5a1IFagPVk0="
 							},
-							"name": "vitPP",
-							"visibility": "private"
+							"name": "vitE",
+							"visibility": "private",
+							"type": "double"
 						},
 						{
 							"_type": "UMLAttribute",
@@ -4157,8 +4283,9 @@
 							"_parent": {
 								"$ref": "AAAAAAGH5a1IFagPVk0="
 							},
-							"name": "vitB6",
-							"visibility": "private"
+							"name": "vitK",
+							"visibility": "private",
+							"type": "double"
 						},
 						{
 							"_type": "UMLAttribute",
@@ -4166,8 +4293,9 @@
 							"_parent": {
 								"$ref": "AAAAAAGH5a1IFagPVk0="
 							},
-							"name": "vitB9",
-							"visibility": "private"
+							"name": "vitC",
+							"visibility": "private",
+							"type": "double"
 						},
 						{
 							"_type": "UMLAttribute",
@@ -4175,8 +4303,9 @@
 							"_parent": {
 								"$ref": "AAAAAAGH5a1IFagPVk0="
 							},
-							"name": "vitB12",
-							"visibility": "private"
+							"name": "vitB1",
+							"visibility": "private",
+							"type": "double"
 						},
 						{
 							"_type": "UMLAttribute",
@@ -4184,8 +4313,9 @@
 							"_parent": {
 								"$ref": "AAAAAAGH5a1IFagPVk0="
 							},
-							"name": "calcium",
-							"visibility": "private"
+							"name": "vitB2",
+							"visibility": "private",
+							"type": "double"
 						},
 						{
 							"_type": "UMLAttribute",
@@ -4193,8 +4323,9 @@
 							"_parent": {
 								"$ref": "AAAAAAGH5a1IFagPVk0="
 							},
-							"name": "magnesium",
-							"visibility": "private"
+							"name": "vitPP",
+							"visibility": "private",
+							"type": "double"
 						},
 						{
 							"_type": "UMLAttribute",
@@ -4202,8 +4333,9 @@
 							"_parent": {
 								"$ref": "AAAAAAGH5a1IFagPVk0="
 							},
-							"name": "iron",
-							"visibility": "private"
+							"name": "vitB6",
+							"visibility": "private",
+							"type": "double"
 						},
 						{
 							"_type": "UMLAttribute",
@@ -4211,8 +4343,9 @@
 							"_parent": {
 								"$ref": "AAAAAAGH5a1IFagPVk0="
 							},
-							"name": "fer",
-							"visibility": "private"
+							"name": "vitB9",
+							"visibility": "private",
+							"type": "double"
 						},
 						{
 							"_type": "UMLAttribute",
@@ -4220,8 +4353,9 @@
 							"_parent": {
 								"$ref": "AAAAAAGH5a1IFagPVk0="
 							},
-							"name": "betaCarotene",
-							"visibility": "private"
+							"name": "vitB12",
+							"visibility": "private",
+							"type": "double"
 						},
 						{
 							"_type": "UMLAttribute",
@@ -4229,8 +4363,9 @@
 							"_parent": {
 								"$ref": "AAAAAAGH5a1IFagPVk0="
 							},
-							"name": "huilePalme",
-							"visibility": "private"
+							"name": "calcium",
+							"visibility": "private",
+							"type": "double"
 						},
 						{
 							"_type": "UMLAttribute",
@@ -4240,6 +4375,56 @@
 							},
 							"name": "Attribute2",
 							"type": ""
+						},
+						{
+							"_type": "UMLAttribute",
+							"_id": "AAAAAAGH5ytF0whI7y8=",
+							"_parent": {
+								"$ref": "AAAAAAGH5a1IFagPVk0="
+							},
+							"name": "magnesium",
+							"visibility": "private",
+							"type": "double"
+						},
+						{
+							"_type": "UMLAttribute",
+							"_id": "AAAAAAGH5ytT0wkClDc=",
+							"_parent": {
+								"$ref": "AAAAAAGH5a1IFagPVk0="
+							},
+							"name": "iron",
+							"visibility": "private",
+							"type": "double"
+						},
+						{
+							"_type": "UMLAttribute",
+							"_id": "AAAAAAGH5ytgxAoW+wY=",
+							"_parent": {
+								"$ref": "AAAAAAGH5a1IFagPVk0="
+							},
+							"name": "fer",
+							"visibility": "private",
+							"type": "double"
+						},
+						{
+							"_type": "UMLAttribute",
+							"_id": "AAAAAAGH5ywe+BT3y5k=",
+							"_parent": {
+								"$ref": "AAAAAAGH5a1IFagPVk0="
+							},
+							"name": "betaCarotene",
+							"visibility": "private",
+							"type": "double"
+						},
+						{
+							"_type": "UMLAttribute",
+							"_id": "AAAAAAGH5yxC0BiUZp0=",
+							"_parent": {
+								"$ref": "AAAAAAGH5a1IFagPVk0="
+							},
+							"name": "huilePalme",
+							"visibility": "private",
+							"type": "bool"
 						}
 					]
 				},
@@ -4347,8 +4532,9 @@
 							"_parent": {
 								"$ref": "AAAAAAGH5igEy6i0M1c="
 							},
-							"name": "idCategorie",
-							"visibility": "private"
+							"name": "id",
+							"visibility": "private",
+							"type": "int"
 						},
 						{
 							"_type": "UMLAttribute",
@@ -4356,7 +4542,7 @@
 							"_parent": {
 								"$ref": "AAAAAAGH5igEy6i0M1c="
 							},
-							"name": "nom",
+							"name": "nom String",
 							"visibility": "private"
 						}
 					]
@@ -4408,7 +4594,8 @@
 								"$ref": "AAAAAAGH5jCgfrNBpOw="
 							},
 							"name": "id",
-							"visibility": "private"
+							"visibility": "private",
+							"type": "int"
 						},
 						{
 							"_type": "UMLAttribute",
@@ -4417,7 +4604,8 @@
 								"$ref": "AAAAAAGH5jCgfrNBpOw="
 							},
 							"name": "nom",
-							"visibility": "private"
+							"visibility": "private",
+							"type": "String"
 						}
 					]
 				},
@@ -4469,7 +4657,8 @@
 								"$ref": "AAAAAAGH5jFCOrUHhnw="
 							},
 							"name": "id",
-							"visibility": "private"
+							"visibility": "private",
+							"type": "int"
 						},
 						{
 							"_type": "UMLAttribute",
@@ -4477,8 +4666,19 @@
 							"_parent": {
 								"$ref": "AAAAAAGH5jFCOrUHhnw="
 							},
+							"name": "code",
+							"visibility": "private",
+							"type": "String"
+						},
+						{
+							"_type": "UMLAttribute",
+							"_id": "AAAAAAGH5ydQ9+iCAr4=",
+							"_parent": {
+								"$ref": "AAAAAAGH5jFCOrUHhnw="
+							},
 							"name": "nom",
-							"visibility": "private"
+							"visibility": "private",
+							"type": "String"
 						}
 					]
 				},
@@ -4497,7 +4697,7 @@
 								"$ref": "AAAAAAGH5wAPjyaYVro="
 							},
 							"name": "nom",
-							"visibility": "private"
+							"type": "String"
 						}
 					],
 					"operations": [
@@ -4557,7 +4757,8 @@
 								"$ref": "AAAAAAGH5wEnlTdBmRA="
 							},
 							"name": "id",
-							"visibility": "private"
+							"visibility": "private",
+							"type": "int"
 						},
 						{
 							"_type": "UMLAttribute",
@@ -4566,7 +4767,8 @@
 								"$ref": "AAAAAAGH5wEnlTdBmRA="
 							},
 							"name": "nom",
-							"visibility": "private"
+							"visibility": "private",
+							"type": "String"
 						}
 					]
 				},
@@ -4593,7 +4795,7 @@
 								"reference": {
 									"$ref": "AAAAAAGH5wIVykgbhHA="
 								},
-								"multiplicity": "1"
+								"multiplicity": "1..*"
 							},
 							"end2": {
 								"_type": "UMLAssociationEnd",
@@ -4616,7 +4818,8 @@
 								"$ref": "AAAAAAGH5wIVykgbhHA="
 							},
 							"name": "id",
-							"visibility": "private"
+							"visibility": "private",
+							"type": "int"
 						},
 						{
 							"_type": "UMLAttribute",
@@ -4625,7 +4828,8 @@
 								"$ref": "AAAAAAGH5wIVykgbhHA="
 							},
 							"name": "nom",
-							"visibility": "private"
+							"visibility": "private",
+							"type": "String"
 						}
 					]
 				}
