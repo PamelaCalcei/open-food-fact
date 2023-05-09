@@ -8,14 +8,11 @@ import jakarta.persistence.EntityManager;
 import jakarta.persistence.EntityTransaction;
 import jakarta.persistence.TypedQuery;
 import model.Categorie;
+import model.JPAUtils;
 
 public class CategorieDAO implements Idao<Categorie>{
 
-	private EntityManager entityManager;
-
-	public CategorieDAO(EntityManager entityManager) {
-		this.entityManager = entityManager;
-	}
+	private EntityManager entityManager = JPAUtils.getInstance().getEntityManager();
 
 	public Optional<Categorie> get(long id) {
 		return Optional.ofNullable(entityManager.find(Categorie.class, id));

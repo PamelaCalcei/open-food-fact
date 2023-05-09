@@ -9,13 +9,10 @@ import jakarta.persistence.EntityManager;
 import jakarta.persistence.EntityTransaction;
 import jakarta.persistence.TypedQuery;
 import model.Ingredient;
+import model.JPAUtils;
 
-public class IngredientDAO implements Idao<Ingredient>{
-	private EntityManager entityManager;
-
-	public IngredientDAO(EntityManager entityManager) {
-		this.entityManager = entityManager;
-	}
+public class IngredientDAO implements Idao<Ingredient> {
+	private EntityManager entityManager = JPAUtils.getInstance().getEntityManager();
 
 	public Optional<Ingredient> get(long id) {
 		return Optional.ofNullable(entityManager.find(Ingredient.class, id));

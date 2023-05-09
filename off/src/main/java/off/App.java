@@ -8,6 +8,7 @@ import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.List;
 
+import dao.CategorieDAO;
 import jakarta.persistence.EntityManager;
 import model.Categorie;
 import model.JPAUtils;
@@ -16,28 +17,38 @@ import model.Produit;
 public class App {
 	public static void main(String[] args) throws IOException {
 
-		// Lire fichier avec instanciation
 		Path pathFile = Paths.get("D:\\srping tools\\open-food-fact\\open-food-facts.csv");
 		List<String> lines = Files.readAllLines(pathFile, StandardCharsets.UTF_8);
-		List<String> data = new ArrayList<>();
 
+		String firstLine = lines.get(0);
+		lines.remove(0);
+		int j = 0;
 		for (String line : lines) {
+			if(j > 99) {
+				break;
+			}
 			Produit produit = new Produit();
 			String[] values = line.split("\\|");
 			for (int i = 0; i < values.length; i++) {
 				switch (i) {
 				case 0:
-					Categorie categorie = new Categorie();
+					Categorie categorie = null;
+					//categorie = CategorieDAO.getInstance().getByName(values[0]);
+					//if(categorie == null){
+						//categorie = new Categorie(values[0]);
+						//categorie = CategorieDAO.getInstance().save(categorie);
+					//}
+					produit.setCategorie(categorie);
 					break;
 				default:
 					break;
 				}
 			}
+			//ProduitDAO.getInstance.save(produit);
+			j++;
 		}
 
 		EntityManager em = JPAUtils.getInstance().getEntityManager();
-		em.getTransaction().begin();
-		em.getTransaction().commit();
 		em.close();
 	}
 }

@@ -9,15 +9,13 @@ import jakarta.persistence.EntityManager;
 import jakarta.persistence.EntityTransaction;
 import jakarta.persistence.TypedQuery;
 import model.Allergene;
+import model.JPAUtils;
 
 public class AllergeneDAO implements Idao<Allergene>{
 
-	private EntityManager entityManager;
+	private EntityManager entityManager = JPAUtils.getInstance().getEntityManager();
 
-	public AllergeneDAO(EntityManager entityManager) {
-		this.entityManager = entityManager;
-	}
-
+	
 
 	public Optional<Allergene> get(long id) {
 		return Optional.ofNullable(entityManager.find(Allergene.class, id));

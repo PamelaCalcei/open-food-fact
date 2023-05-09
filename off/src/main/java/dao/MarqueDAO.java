@@ -10,13 +10,9 @@ import jakarta.persistence.TypedQuery;
 import model.JPAUtils;
 import model.Marque;
 
-public class MarqueDAO implements Idao<Marque>{
+public class MarqueDAO implements Idao<Marque> {
 
-	private EntityManager entityManager;
-
-	public MarqueDAO() {
-		entityManager = JPAUtils.getInstance().getEntityManager();
-	}
+	private EntityManager entityManager = JPAUtils.getInstance().getEntityManager();
 
 	public Optional<Marque> get(long id) {
 		return Optional.ofNullable(entityManager.find(Marque.class, id));

@@ -8,16 +8,13 @@ import java.util.function.Consumer;
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.EntityTransaction;
 import jakarta.persistence.TypedQuery;
+import model.JPAUtils;
 import model.NutriScore;
 import model.Produit;
 
-public class ProduitDAO implements Idao<Produit>{
+public class ProduitDAO implements Idao<Produit> {
 
-	private EntityManager entityManager;
-
-	public ProduitDAO(EntityManager entityManager) {
-		this.entityManager = entityManager;
-	}
+	private EntityManager entityManager = JPAUtils.getInstance().getEntityManager();
 
 	public Optional<Produit> get(long id) {
 		return Optional.ofNullable(entityManager.find(Produit.class, id));

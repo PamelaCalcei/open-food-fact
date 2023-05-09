@@ -9,14 +9,12 @@ import jakarta.persistence.EntityManager;
 import jakarta.persistence.EntityTransaction;
 import jakarta.persistence.TypedQuery;
 import model.Additif;
+import model.JPAUtils;
 
 public class AdditifDAO implements Idao<Additif>{
 
-	private EntityManager entityManager;
+	private EntityManager entityManager = JPAUtils.getInstance().getEntityManager();
 
-	public AdditifDAO(EntityManager entityManager) {
-		this.entityManager = entityManager;
-	}
 
 	public Optional<Additif> get(long id) {
 		return Optional.ofNullable(entityManager.find(Additif.class, id));
