@@ -7,11 +7,10 @@ import java.util.function.Consumer;
 
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.EntityTransaction;
-import jakarta.persistence.Query;
+import jakarta.persistence.TypedQuery;
 import model.Allergene;
-import model.JPAUtils;
 
-public class AllergeneDAO {
+public class AllergeneDAO implements Idao<Allergene>{
 
 	private EntityManager entityManager;
 
@@ -19,16 +18,13 @@ public class AllergeneDAO {
 		this.entityManager = entityManager;
 	}
 
-	public AllergeneDAO() {
-		entityManager = JPAUtils.getInstance().getEntityManager();
-	}
 
 	public Optional<Allergene> get(long id) {
 		return Optional.ofNullable(entityManager.find(Allergene.class, id));
 	}
 
 	public List<Allergene> getAll() {
-		Query query = entityManager.createQuery("SELECT a FROM Allergene a");
+		TypedQuery<Allergene> query = entityManager.createQuery("SELECT a FROM Additif a", Allergene.class);
 		return query.getResultList();
 	}
 

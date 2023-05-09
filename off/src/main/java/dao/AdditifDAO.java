@@ -7,10 +7,10 @@ import java.util.function.Consumer;
 
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.EntityTransaction;
-import jakarta.persistence.Query;
+import jakarta.persistence.TypedQuery;
 import model.Additif;
 
-public class AdditifDAO {
+public class AdditifDAO implements Idao<Additif>{
 
 	private EntityManager entityManager;
 
@@ -23,7 +23,7 @@ public class AdditifDAO {
 	}
 
 	public List<Additif> getAll() {
-		Query query = entityManager.createQuery("SELECT a FROM Additif a");
+		TypedQuery<Additif> query = entityManager.createQuery("SELECT a FROM Additif a", Additif.class);
 		return query.getResultList();
 	}
 

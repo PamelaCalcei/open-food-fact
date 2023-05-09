@@ -7,11 +7,11 @@ import java.util.function.Consumer;
 
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.EntityTransaction;
-import jakarta.persistence.Query;
+import jakarta.persistence.TypedQuery;
 import model.NutriScore;
 import model.Produit;
 
-public class ProduitDAO {
+public class ProduitDAO implements Idao<Produit>{
 
 	private EntityManager entityManager;
 
@@ -24,7 +24,7 @@ public class ProduitDAO {
 	}
 
 	public List<Produit> getAll() {
-		Query query = entityManager.createQuery("SELECT p FROM Produit p");
+		TypedQuery<Produit> query = entityManager.createQuery("SELECT a FROM Additif a", Produit.class);
 		return query.getResultList();
 	}
 
