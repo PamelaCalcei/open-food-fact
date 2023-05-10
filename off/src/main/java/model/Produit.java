@@ -4,6 +4,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 import jakarta.persistence.Entity;
+import jakarta.persistence.EnumType;
+import jakarta.persistence.Enumerated;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
@@ -18,8 +20,9 @@ public class Produit {
 	@ManyToMany
 	private List<Marque> marques = new ArrayList<>();
 	private String nom;
+    @Enumerated(EnumType.STRING)
 	private NutriScore nutriscore;
-	private int energie;
+	private float energie;
 	private float quantiteGraisse;
 	@ManyToMany
 	private List<Ingredient> ingredients = new ArrayList<>();
@@ -32,22 +35,22 @@ public class Produit {
 	private float sucre;
 	private float fibres;
 	private float proteines;
-	private double vitA;
-	private double vitD;
-	private double vitE;
-	private double vitK;
-	private double vitC;
-	private double vitB1;
-	private double vitB2;
-	private double vitPP;
-	private double vitB6;
-	private double vitB9;
-	private double vitB12;
-	private double calcium;
-	private double magnesium;
-	private double iron;
-	private double fer;
-	private double betaCarotene;
+	private float vitA;
+	private float vitD;
+	private float vitE;
+	private float vitK;
+	private float vitC;
+	private float vitB1;
+	private float vitB2;
+	private float vitPP;
+	private float vitB6;
+	private float vitB9;
+	private float vitB12;
+	private float calcium;
+	private float magnesium;
+	private float iron;
+	private float fer;
+	private float betaCarotene;
 	private boolean huilPalme;
 
 	public long getId() {
@@ -82,11 +85,11 @@ public class Produit {
 		this.nutriscore = nutriscore;
 	}
 
-	public int getEnergie() {
+	public float getEnergie() {
 		return energie;
 	}
 
-	public void setEnergie(int energie) {
+	public void setEnergie(float energie) {
 		this.energie = energie;
 	}
 
@@ -154,131 +157,131 @@ public class Produit {
 		this.proteines = proteines;
 	}
 
-	public double getVitA() {
+	public float getVitA() {
 		return vitA;
 	}
 
-	public void setVitA(double vitA) {
+	public void setVitA(float vitA) {
 		this.vitA = vitA;
 	}
 
-	public double getVitD() {
+	public float getVitD() {
 		return vitD;
 	}
 
-	public void setVitD(double vitD) {
+	public void setVitD(float vitD) {
 		this.vitD = vitD;
 	}
 
-	public double getVitE() {
+	public float getVitE() {
 		return vitE;
 	}
 
-	public void setVitE(double vitE) {
+	public void setVitE(float vitE) {
 		this.vitE = vitE;
 	}
 
-	public double getVitK() {
+	public float getVitK() {
 		return vitK;
 	}
 
-	public void setVitK(double vitK) {
+	public void setVitK(float vitK) {
 		this.vitK = vitK;
 	}
 
-	public double getVitC() {
+	public float getVitC() {
 		return vitC;
 	}
 
-	public void setVitC(double vitC) {
+	public void setVitC(float vitC) {
 		this.vitC = vitC;
 	}
 
-	public double getVitB1() {
+	public float getVitB1() {
 		return vitB1;
 	}
 
-	public void setVitB1(double vitB1) {
+	public void setVitB1(float vitB1) {
 		this.vitB1 = vitB1;
 	}
 
-	public double getVitB2() {
+	public float getVitB2() {
 		return vitB2;
 	}
 
-	public void setVitB2(double vitB2) {
+	public void setVitB2(float vitB2) {
 		this.vitB2 = vitB2;
 	}
 
-	public double getVitPP() {
+	public float getVitPP() {
 		return vitPP;
 	}
 
-	public void setVitPP(double vitPP) {
+	public void setVitPP(float vitPP) {
 		this.vitPP = vitPP;
 	}
 
-	public double getVitB6() {
+	public float getVitB6() {
 		return vitB6;
 	}
 
-	public void setVitB6(double vitB6) {
+	public void setVitB6(float vitB6) {
 		this.vitB6 = vitB6;
 	}
 
-	public double getVitB9() {
+	public float getVitB9() {
 		return vitB9;
 	}
 
-	public void setVitB9(double vitB9) {
+	public void setVitB9(float vitB9) {
 		this.vitB9 = vitB9;
 	}
 
-	public double getVitB12() {
+	public float getVitB12() {
 		return vitB12;
 	}
 
-	public void setVitB12(double vitB12) {
+	public void setVitB12(float vitB12) {
 		this.vitB12 = vitB12;
 	}
 
-	public double getCalcium() {
+	public float getCalcium() {
 		return calcium;
 	}
 
-	public void setCalcium(double calcium) {
+	public void setCalcium(float calcium) {
 		this.calcium = calcium;
 	}
 
-	public double getMagnesium() {
+	public float getMagnesium() {
 		return magnesium;
 	}
 
-	public void setMagnesium(double magnesium) {
+	public void setMagnesium(float magnesium) {
 		this.magnesium = magnesium;
 	}
 
-	public double getIron() {
+	public float getIron() {
 		return iron;
 	}
 
-	public void setIron(double iron) {
+	public void setIron(float iron) {
 		this.iron = iron;
 	}
 
-	public double getFer() {
+	public float getFer() {
 		return fer;
 	}
 
-	public void setFer(double fer) {
+	public void setFer(float fer) {
 		this.fer = fer;
 	}
 
-	public double getBetaCarotene() {
+	public float getBetaCarotene() {
 		return betaCarotene;
 	}
 
-	public void setBetaCarotene(double betaCarotene) {
+	public void setBetaCarotene(float betaCarotene) {
 		this.betaCarotene = betaCarotene;
 	}
 

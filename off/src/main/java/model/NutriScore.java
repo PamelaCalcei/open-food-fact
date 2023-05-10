@@ -4,5 +4,6 @@ public enum NutriScore {
 	A,
 	B,
 	C,
-	D
+	D,
+	E
 }

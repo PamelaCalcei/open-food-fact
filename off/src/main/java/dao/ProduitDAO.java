@@ -13,11 +13,18 @@ import model.NutriScore;
 import model.Produit;
 
 public class ProduitDAO implements Idao<Produit> {
-
+	private static ProduitDAO instance = null;
 	private EntityManager entityManager = JPAUtils.getInstance().getEntityManager();
 
 	public Optional<Produit> get(long id) {
 		return Optional.ofNullable(entityManager.find(Produit.class, id));
+	}
+
+	public static ProduitDAO getInstance() {
+		if (instance == null) {
+			instance = new ProduitDAO();
+		}
+		return instance;
 	}
 
 	public List<Produit> getAll() {
