@@ -9,13 +9,24 @@ import jakarta.persistence.EntityManager;
 import jakarta.persistence.EntityTransaction;
 import jakarta.persistence.TypedQuery;
 import model.Allergene;
+import model.Categorie;
 import model.JPAUtils;
 
-public class AllergeneDAO implements Idao<Allergene>{
+public class AllergeneDAO implements Idao<Allergene> {
+
+	private static AllergeneDAO instance = null;
 
 	private EntityManager entityManager = JPAUtils.getInstance().getEntityManager();
 
-	
+	private AllergeneDAO() {
+	}
+
+	public static AllergeneDAO getInstance() {
+		if (instance == null) {
+			instance = new AllergeneDAO();
+		}
+		return instance;
+	}
 
 	public Optional<Allergene> get(long id) {
 		return Optional.ofNullable(entityManager.find(Allergene.class, id));
@@ -26,6 +37,14 @@ public class AllergeneDAO implements Idao<Allergene>{
 		return query.getResultList();
 	}
 
+	public Allergene getByName(String nom) {
+		TypedQuery<Allergene> query = entityManager.createQuery("SELECT a FROM Allergene a WHERE a.nom = :nom",
+				Allergene.class);
+		query.setParameter("nom", nom);
+		List<Allergene> result = query.getResultList();
+		return result.isEmpty() ? null : result.get(0);
+	}
+	
 	public void save(Allergene allergene) {
 		executeInsideTransaction(entityManager -> entityManager.persist(allergene));
 	}

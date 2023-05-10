@@ -11,10 +11,21 @@ import jakarta.persistence.TypedQuery;
 import model.Additif;
 import model.JPAUtils;
 
-public class AdditifDAO implements Idao<Additif>{
+public class AdditifDAO implements Idao<Additif> {
+
+	private static AdditifDAO instance = null;
 
 	private EntityManager entityManager = JPAUtils.getInstance().getEntityManager();
 
+	private AdditifDAO() {
+	}
+
+	public static AdditifDAO getInstance() {
+		if (instance == null) {
+			instance = new AdditifDAO();
+		}
+		return instance;
+	}
 
 	public Optional<Additif> get(long id) {
 		return Optional.ofNullable(entityManager.find(Additif.class, id));
@@ -23,6 +34,14 @@ public class AdditifDAO implements Idao<Additif>{
 	public List<Additif> getAll() {
 		TypedQuery<Additif> query = entityManager.createQuery("SELECT a FROM Additif a", Additif.class);
 		return query.getResultList();
+	}
+
+	public Additif getByName(String nom) {
+		TypedQuery<Additif> query = entityManager.createQuery("SELECT a FROM Additif a WHERE a.nom = :nom",
+				Additif.class);
+		query.setParameter("nom", nom);
+		List<Additif> result = query.getResultList();
+		return result.isEmpty() ? null : result.get(0);
 	}
 
 	public void save(Additif additif) {

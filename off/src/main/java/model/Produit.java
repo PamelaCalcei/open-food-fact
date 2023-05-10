@@ -3,6 +3,7 @@ package model;
 import java.util.ArrayList;
 import java.util.List;
 
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.EnumType;
 import jakarta.persistence.Enumerated;
@@ -19,14 +20,16 @@ public class Produit {
 	private long id;
 	@ManyToMany
 	private List<Marque> marques = new ArrayList<>();
+	@Column(length = 1000)
 	private String nom;
-    @Enumerated(EnumType.STRING)
+	@Enumerated(EnumType.STRING)
 	private NutriScore nutriscore;
 	private float energie;
 	private float quantiteGraisse;
 	@ManyToMany
 	private List<Ingredient> ingredients = new ArrayList<>();
 	@ManyToMany
+	@Column(length = 1000)
 	private List<Additif> additifs = new ArrayList<>();
 	@ManyToOne
 	private Categorie categorie;
@@ -34,6 +37,7 @@ public class Produit {
 	private List<Allergene> allergenes = new ArrayList<>();
 	private float sucre;
 	private float fibres;
+	private float sel;
 	private float proteines;
 	private float vitA;
 	private float vitD;
@@ -147,6 +151,14 @@ public class Produit {
 
 	public void setFibres(float fibres) {
 		this.fibres = fibres;
+	}
+
+	public float getSel() {
+		return sel;
+	}
+
+	public void setSel(float sel) {
+		this.sel = sel;
 	}
 
 	public float getProteines() {

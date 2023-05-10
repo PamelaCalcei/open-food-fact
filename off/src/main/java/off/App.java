@@ -8,11 +8,15 @@ import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.List;
 
+import dao.AdditifDAO;
+import dao.AllergeneDAO;
 import dao.CategorieDAO;
 import dao.IngredientDAO;
 import dao.MarqueDAO;
 import dao.ProduitDAO;
 import jakarta.persistence.EntityManager;
+import model.Additif;
+import model.Allergene;
 import model.Categorie;
 import model.Ingredient;
 import model.JPAUtils;
@@ -22,6 +26,7 @@ import model.Produit;
 
 public class App {
 	public static void main(String[] args) throws IOException {
+		long debut = System.currentTimeMillis();
 
 		Path pathFile = Paths.get("D:\\srping tools\\open-food-fact\\open-food-facts.csv");
 		List<String> lines = Files.readAllLines(pathFile, StandardCharsets.UTF_8);
@@ -74,7 +79,7 @@ public class App {
 						Ingredient ingredient = null;
 						ingredient = IngredientDAO.getInstance().getByName(nom.trim());
 						if (ingredient == null) {
-							ingredient = new Ingredient(nom.trim().replace("_", "").replace("%", "").replace("*", "").replace(",", "").replace(".", "").replace(";", "").replace(":", ""));
+							ingredient = new Ingredient(nom.trim().replaceAll("/\\d+% ?/g", ""));
 							IngredientDAO.getInstance().save(ingredient);
 						}
 						ingredients.add(ingredient);
@@ -82,7 +87,151 @@ public class App {
 					produit.getIngredient().addAll(ingredients);
 					break;
 				case 5:
-					produit.setEnergie(Float.parseFloat(values[5]));
+					if (!values[5].isEmpty()) {
+						produit.setEnergie(Float.parseFloat(values[5]));
+					}
+					break;
+				case 6:
+					if (!values[6].isEmpty()) {
+						produit.setQuantiteGraisse(Float.parseFloat(values[6]));
+					}
+					break;
+				case 7:
+					if (!values[7].isEmpty()) {
+						produit.setSucre(Float.parseFloat(values[7]));
+					}
+					break;
+				case 8:
+					if (!values[8].isEmpty()) {
+						produit.setFibres(Float.parseFloat(values[8]));
+					}
+
+					break;
+				case 9:
+					if (!values[9].isEmpty()) {
+						produit.setSel(Float.parseFloat(values[9]));
+					}
+					break;
+				case 10:
+					if (!values[10].isEmpty()) {
+						produit.setVitA(Float.parseFloat(values[10]));
+					}
+
+					break;
+				case 11:
+					if (!values[11].isEmpty()) {
+						produit.setVitD(Float.parseFloat(values[11]));
+					}
+					break;
+				case 12:
+					if (!values[12].isEmpty()) {
+						produit.setVitE(Float.parseFloat(values[12]));
+					}
+					break;
+				case 13:
+					if (!values[13].isEmpty()) {
+						produit.setVitK(Float.parseFloat(values[13]));
+					}
+
+					break;
+				case 14:
+					if (!values[14].isEmpty()) {
+						produit.setVitC(Float.parseFloat(values[14]));
+					}
+
+					break;
+				case 15:
+					if (!values[15].isEmpty()) {
+						produit.setVitB1(Float.parseFloat(values[15]));
+					}
+
+					break;
+				case 16:
+					if (!values[16].isEmpty()) {
+						produit.setVitB2(Float.parseFloat(values[16]));
+					}
+
+					break;
+				case 17:
+					if (!values[17].isEmpty()) {
+						produit.setVitPP(Float.parseFloat(values[17]));
+					}
+
+					break;
+				case 18:
+					if (!values[18].isEmpty()) {
+						produit.setVitB6(Float.parseFloat(values[18]));
+					}
+
+					break;
+				case 19:
+					if (!values[19].isEmpty()) {
+						produit.setVitB9(Float.parseFloat(values[19]));
+					}
+
+					break;
+				case 20:
+					if (!values[20].isEmpty()) {
+						produit.setVitB12(Float.parseFloat(values[20]));
+					}
+
+					break;
+				case 21:
+					if (!values[21].isEmpty()) {
+						produit.setCalcium(Float.parseFloat(values[21]));
+					}
+					
+					break;
+				case 22:
+					if (!values[22].isEmpty()) {
+						produit.setMagnesium(Float.parseFloat(values[22]));
+					}
+					break;
+				case 23:
+					if (!values[23].isEmpty()) {
+						produit.setIron(Float.parseFloat(values[23]));
+					}
+					break;
+				case 24:
+					if (!values[24].isEmpty()) {
+						produit.setFer(Float.parseFloat(values[24]));
+					}
+					break;
+				case 25:
+					if (!values[25].isEmpty()) {
+						produit.setBetaCarotene(Float.parseFloat(values[25]));
+					}
+					break;
+				case 26:
+					produit.setHuilPalme(Boolean.parseBoolean(values[25]));
+					break;
+				case 27:
+					String[] allergeneNom = values[27].split(",");
+					List<Allergene> allergene = new ArrayList<>();
+					for (String nom : allergeneNom) {
+						Allergene allergenes = null;
+						allergenes = AllergeneDAO.getInstance().getByName(nom.trim());
+						if (allergenes == null) {
+							allergenes = new Allergene(nom.trim());
+							AllergeneDAO.getInstance().save(allergenes);
+						}
+						allergene.add(allergenes);
+					}
+					produit.getAllergene().addAll(allergene);
+					break;
+				case 28:
+					String[] additif = values[28].split(",");
+					List<Additif> additifs = new ArrayList<>();
+					for (String nom : additif) {
+						Additif additifNom = null;
+						additifNom = AdditifDAO.getInstance().getByName(nom.trim());
+						if (additifNom == null) {
+							additifNom = new Additif(nom.trim());
+							AdditifDAO.getInstance().save(additifNom);
+						}
+						additifs.add(additifNom);
+					}
+					produit.getAdditif().addAll(additifs);
 					break;
 				default:
 					break;
@@ -93,6 +242,10 @@ public class App {
 		}
 
 		EntityManager em = JPAUtils.getInstance().getEntityManager();
+		long fin = System.currentTimeMillis();
+		System.out.println("Temps écoulé en millisecondes :" + (fin - debut));
+		System.out.println("Temps écoulé en minutes :" + (fin - debut) / 60000);
+
 		em.close();
 	}
 }
