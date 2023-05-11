@@ -79,7 +79,7 @@ public class App {
 						Ingredient ingredient = null;
 						ingredient = IngredientDAO.getInstance().getByName(nom.trim());
 						if (ingredient == null) {
-							ingredient = new Ingredient(nom.trim().replaceAll("/\\d+% ?/g _", ""));
+							ingredient = new Ingredient(nom.trim().replaceAll("_", " ").replaceAll("/\\d+% ?/g", ""));
 							IngredientDAO.getInstance().save(ingredient);
 						}
 						ingredients.add(ingredient);
