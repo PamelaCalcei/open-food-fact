@@ -79,7 +79,7 @@ public class App {
 						Ingredient ingredient = null;
 						ingredient = IngredientDAO.getInstance().getByName(nom.trim());
 						if (ingredient == null) {
-							ingredient = new Ingredient(nom.trim().replaceAll("/\\d+% ?/g", ""));
+							ingredient = new Ingredient(nom.trim().replaceAll("/\\d+% ?/g _", ""));
 							IngredientDAO.getInstance().save(ingredient);
 						}
 						ingredients.add(ingredient);
@@ -180,7 +180,7 @@ public class App {
 					if (!values[21].isEmpty()) {
 						produit.setCalcium(Float.parseFloat(values[21]));
 					}
-					
+
 					break;
 				case 22:
 					if (!values[22].isEmpty()) {
@@ -220,18 +220,19 @@ public class App {
 					produit.getAllergene().addAll(allergene);
 					break;
 				case 28:
-					String[] additif = values[28].split(",");
-					List<Additif> additifs = new ArrayList<>();
-					for (String nom : additif) {
-						Additif additifNom = null;
-						additifNom = AdditifDAO.getInstance().getByName(nom.trim());
-						if (additifNom == null) {
-							additifNom = new Additif(nom.trim());
-							AdditifDAO.getInstance().save(additifNom);
+					String[] additifNames = values[28].split(",");
+					List<Additif> additifList = new ArrayList<>();
+					for (String additifName : additifNames) {
+						additifName = additifName.trim();
+						Additif additif = AdditifDAO.getInstance().getByName(additifName);
+						if (additif == null) {
+							additif = new Additif();
+							additif.setNom(additifName);
+							AdditifDAO.getInstance().save(additif);
 						}
-						additifs.add(additifNom);
+						additifList.add(additif);
 					}
-					produit.getAdditif().addAll(additifs);
+					produit.getAdditif().addAll(additifList);
 					break;
 				default:
 					break;

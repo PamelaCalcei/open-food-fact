@@ -43,6 +43,13 @@ public class AdditifDAO implements Idao<Additif> {
 		List<Additif> result = query.getResultList();
 		return result.isEmpty() ? null : result.get(0);
 	}
+	
+	public Additif getByCode(String code) {
+	    TypedQuery<Additif> query = entityManager.createQuery("SELECT a FROM Additif a WHERE a.code = :code", Additif.class);
+	    query.setParameter("code", code);
+	    List<Additif> result = query.getResultList();
+	    return result.isEmpty() ? null : result.get(0);
+	}
 
 	public void save(Additif additif) {
 		executeInsideTransaction(entityManager -> entityManager.persist(additif));

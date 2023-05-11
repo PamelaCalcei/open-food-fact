@@ -13,10 +13,6 @@ public class Additif {
 	private String code;
 	private String nom;
 
-	public Additif( String nom) {
-		super();
-		this.nom = nom;
-	}
 
 	public long getId() {
 		return id;
